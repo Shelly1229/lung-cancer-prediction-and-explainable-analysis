@@ -18,15 +18,15 @@
 #### After determining the hyperparameters, Sequential Forward Feature Selection (SFFS) is used to extract key features. SFFS starts from an empty set and incrementally adds features that most improve model performance until a preset condition is met. This effectively reduces feature dimensionality, enhancing training efficiency and generalization ability.
 ### （4）Ensemble Model
 #### Once the individual learners are optimized and feature selection is complete, these models are combined into a powerful ensemble model. By designing appropriate integration strategies such as voting or weighted averaging, the framework maximizes the strengths of each model to improve overall prediction performance.
-### Model Analysis and Interpretation
-### （1）Sample-Level Analysis
+### （5）Model Analysis and Interpretation
+### （5.1）Sample-Level Analysis
 #### Histograms and density plots are drawn at the sample level to intuitively display data distribution. Histograms clearly show the frequency distribution of feature values, helping to understand the overall data distribution shape. Density plots further smooth the histogram curves, more intuitively reflecting the probability density distribution of the data, providing a basis for subsequent analysis.
-### （2）Overall-Level Analysis
+### （5.2）Overall-Level Analysis
 #### At the overall level of the ensemble model, feature importance ranking, Partial Dependence Plots (PDP), and heatmaps are used for analysis.
 ##### (a) Feature Importance Ranking: By calculating the contribution of each feature to the model's prediction results, features are ranked. This helps identify the most critical features for model prediction, guiding feature engineering and model optimization.
 ##### (b) Partial Dependence Plots (PDP): Show the relationship between features and model prediction results. PDPs intuitively display the impact trend of a feature on model predictions at different values, helping to understand the model's dependence on features.
 ##### (c) Heatmaps: Visualize the correlation between features and the relationship between features and model outputs. Heatmaps use color intensity to represent numerical values, intuitively presenting the degree of association between features and their impact on model outputs, helping to discover potential feature interactions.
-### （3）Local-Level Analysis
+### （5.3）Local-Level Analysis
 #### At the local level of the ensemble model, various methods are used to interpret individual learners.
 ##### (a) Decision Tree Decision Path Visualization: For decision tree models, visualizing their decision paths shows the decision-making process of the decision tree on the overall sample. This allows users to clearly see how each sample is classified or predicted along the decision tree's path, enhancing the interpretability of the decision tree model.
 ##### (b) SHAP Analysis: Using SHAP values to analyze key features of each individual learner on the overall sample. SHAP values measure the contribution of features to model predictions, assigning a contribution value to each feature to reveal its importance to the model output. Additionally, force_plot is used for visualization to intuitively display the feature contributions of a single sample, helping users understand the model's prediction basis for that sample.
